@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Authentication</title>
+</head>
+<body>
+    <form id="loginForm">
+        <h1>Login</h1>
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" required>
+        <br>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" required>
+        <p><a href="#" onclick="showForgotPassword()">Forgot Password?</a></p>
+        <br>
+        <button type="button" onclick="loginUser()">Login</button>
+        <p>Don't have an account? <a href="#" onclick="showRegistration()">Register</a></p>
+    </form>
+
+    <form id="registrationForm">
+        <h1>Register</h1>
+        <label for="regUsername">Username:</label>
+        <input type="text" id="regUsername" required>
+        <br>
+        <label for="regEmail">Email:</label>
+        <input type="email" id="regEmail" required>
+        <br>
+        <label for="regPassword">Password:</label>
+        <input type="password" id="regPassword" required>
+        <br>
+        <button type="button" onclick="registerUser()">Register</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </form>
+
+    <div id="ContentPage">
+        <h2>Welcome! You are logged in.</h2>
+        <button id="logoutbtn" onclick="logout()">Logout</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
